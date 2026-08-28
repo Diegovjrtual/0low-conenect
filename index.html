@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f1014">
+<title>0low Connect</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast"></div>
+<div class="app">
+  <aside class="serverRail">
+    <div class="logo">0L</div>
+    <div id="serverButtons"></div>
+    <button class="railBtn add" id="createBtn" type="button">＋</button>
+    <button class="railBtn" id="joinBtn" type="button">↗</button>
+    <div class="railBottom">⚙</div>
+  </aside>
+  <aside class="sidebar">
+    <header class="serverHeader"><div><strong id="serverName">0low Connect</strong><small id="serverCode">Nenhum servidor</small></div><button id="serverMenu" type="button">⌄</button></header>
+    <div class="sidebarSearch">🔎 <input id="channelSearch" placeholder="Buscar"></div>
+    <div class="sectionTitle">CANAIS</div>
+    <button class="channel active" type="button"># <span>geral</span></button>
+    <button class="channel" type="button">📢 <span>anuncios</span></button>
+    <div class="sectionTitle">VOZ</div>
+    <button class="channel voice" id="voiceChannel" type="button">🔊 <span>Call geral</span></button>
+    <button class="channel voice" id="screenChannel" type="button">📱 <span>Tela / câmera</span></button>
+    <div class="sidebarUser"><div class="avatar" id="meAvatar">D</div><div class="meText"><b id="meName">Você</b><small>● online</small></div><button id="settingsBtn" type="button">⚙</button></div>
+  </aside>
+  <main class="main">
+    <header class="top"><div class="channelTitle"><b># geral</b><span id="channelTopic">Converse com seu servidor</span></div><div class="topActions"><button id="inviteBtn" type="button">🔗</button><button id="membersBtn" type="button">👥</button><button id="mobileSettings" type="button">⚙</button></div></header>
+    <section class="messages" id="messages"><div class="welcome"><div class="hash">#</div><h1>Bem-vindo ao #geral</h1><p>Crie um servidor ou entre em um servidor para começar.</p></div></section>
+    <form class="composer" id="chatForm"><button type="button" id="attachBtn">＋</button><input id="messageInput" autocomplete="off" placeholder="Mensagem em #geral" disabled><button class="send" type="submit">➤</button></form>
+    <section class="callPanel hidden" id="callPanel"><header><b>🔊 Call geral</b><button id="closeCall" type="button">×</button></header><div class="videos" id="videos"><div class="callEmpty">Entre na call para ligar câmera/microfone.</div></div><div class="callControls"><button id="micBtn" type="button">🎙️</button><button id="camBtn" type="button">📷</button><button id="screenBtn" type="button">📱</button><button class="hangup" id="hangupBtn" type="button">☎</button></div></section>
+  </main>
+  <aside class="memberPanel" id="memberPanel"><div class="membersHeader">MEMBROS — <span id="memberCount">1</span></div><div id="memberList"></div></aside>
+</div>
+<div class="mobileBar"><button id="mobileServers" type="button">☰</button><button id="mobileHome" type="button">⌂</button><button id="mobileCall" type="button">🔊</button><button id="mobileMembers" type="button">👥</button><button id="mobileGear" type="button">⚙</button></div>
+<div class="modal hidden" id="modal"><div class="modalBox"><button class="modalClose" id="modalClose" type="button">×</button><h2 id="modalTitle">Criar servidor</h2><p id="modalDescription"></p><input id="modalInput" placeholder=""><button class="modalPrimary" id="modalAction" type="button">Continuar</button><div class="hint" id="modalHint"></div></div></div>
+<script src="app.js?v=4"></script>
+</body>
+</html>
